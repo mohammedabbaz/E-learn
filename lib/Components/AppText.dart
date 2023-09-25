@@ -28,7 +28,7 @@ class AppText extends StatelessWidget {
       ),
       overflow:   overFlow,
       maxLines: maxLines,
-      textAlign: TextAlign.center,
+      
     );
   }
 }

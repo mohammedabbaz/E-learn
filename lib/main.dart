@@ -1,3 +1,4 @@
+import 'package:e_learn/Core/Data/constant/Link.dart';
 import 'package:e_learn/Core/Parials/Routers.dart';
 import 'package:e_learn/Core/Services/Global.dart';
 import 'package:e_learn/Core/Services/translation/local.dart';
@@ -34,6 +35,7 @@ class MyApp extends StatelessWidget {
             darkTheme: dark,
             debugShowCheckedModeBanner: false,
             getPages: pages,
+            initialRoute: AppLinks.home,
           );
         });
   }

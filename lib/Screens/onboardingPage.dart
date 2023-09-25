@@ -16,6 +16,7 @@ class OnboardingPage extends GetView<OnboardingController> {
     return SafeArea(
       child: GetBuilder<OnboardingController>(builder: (controller) {
         return Scaffold(
+           backgroundColor: Theme.of(context).colorScheme.background,
             body: Padding(
           padding: EdgeInsets.only(bottom: 40.h),
           child: Stack(

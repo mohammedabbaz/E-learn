@@ -18,6 +18,7 @@ class RegisterPage extends GetView<RegisterController> {
       builder: (controller) {
         return SafeArea(
           child: Scaffold(
+             backgroundColor: Theme.of(context).colorScheme.background,
             body: ListView(
               padding: EdgeInsets.symmetric(
                 horizontal: 20.h,
