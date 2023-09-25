@@ -8,5 +8,10 @@ class AppLinks{
    static String register="/register";
    static String verification="/verification";
 
+  static String STORAGE_USER_TOKEN="userToken";
+
+  static String lang="lang";
+
+
 
 }

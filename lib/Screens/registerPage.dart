@@ -101,6 +101,7 @@ class RegisterPage extends GetView<RegisterController> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Checkbox(
+                      
                       activeColor: Theme.of(context).colorScheme.onSecondary,
                       checkColor: Theme.of(context).colorScheme.background,
                       value: controller.conditionCheck,

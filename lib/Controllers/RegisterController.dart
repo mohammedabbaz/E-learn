@@ -12,4 +12,10 @@ class RegisterController extends GetxController{
     conditionCheck=value;
     update();
   }
+
+  Future<void> register() async {
+   
+  
+  }
+
 }
