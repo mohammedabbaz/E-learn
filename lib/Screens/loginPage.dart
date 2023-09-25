@@ -4,6 +4,7 @@ import 'package:e_learn/Components/buildSocialMediaLogin.dart';
 import 'package:e_learn/Components/responsiveButton.dart';
 import 'package:e_learn/Controllers/LoginController.dart';
 import 'package:e_learn/Core/Data/constant/Color.dart';
+import 'package:e_learn/Core/Data/constant/Link.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -32,7 +33,7 @@ class LoginPage extends GetView<LoginController> {
                     children: [
                       AppText(
                         text: "Sign In",
-                        fontsize: 30.sp,
+                        fontsize: 20.sp,
                         color: Theme.of(context).colorScheme.primary,
                         fontWeight: FontWeight.bold,
                       ),
@@ -41,7 +42,7 @@ class LoginPage extends GetView<LoginController> {
                       ),
                       AppText(
                         text: "Hi!,Welcome back , You'v been missed",
-                        fontsize: 15,
+                        fontsize: 12.sp,
                         color: Theme.of(context).colorScheme.secondary,
                       ),
                     ],
@@ -82,21 +83,26 @@ class LoginPage extends GetView<LoginController> {
                   ),
                 ),
                 SizedBox(
-                  height: 10.h,
+                  height: 15.h,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
-                    AppText(
-                      text: "Forgot Password?",
-                      fontsize: 13.sp,
-                      color: Theme.of(context).colorScheme.onSecondary,
-                      fontWeight: FontWeight.w500,
+                  GestureDetector(
+                      onTap: () {
+                
+                      },
+                      child: AppText(
+                        text: "Forgot Password?",
+                        fontsize: 13.sp,
+                        color: Theme.of(context).colorScheme.onSecondary,
+                        fontWeight: FontWeight.w500,
+                      ),
                     ),
                   ],
                 ),
                 SizedBox(
-                  height: 10.h,
+                  height: 15.h,
                 ),
                 ResponsiveButton(
                   widget: AppText(
@@ -108,14 +114,44 @@ class LoginPage extends GetView<LoginController> {
                   color: Theme.of(context).colorScheme.onSecondary,
                   height: 40.h,
                   width: double.infinity,
-                  radius: 20.h,
+                  radius: 15.h,
                   padding: 8.h,
                   function: () {},
                 ),
-SizedBox(
+                SizedBox(
                   height: 20.h,
                 ),
-                SocialLoginButton(controller: controller,),
+                SocialLoginButton(
+                  controller: controller,
+                ),
+                SizedBox(
+                  height: 10.h,
+                ),
+                  Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    AppText(
+                      text: "Don't have an account?",
+                      fontsize: 12.sp,
+                      color: Theme.of(context).colorScheme.primary,
+                      fontWeight: FontWeight.normal,
+                    ),
+                    SizedBox(
+                  width: 5.h,
+                ),
+                    GestureDetector(
+                      onTap: () {
+                        Get.toNamed(AppLinks.register);
+                      },
+                      child: AppText(
+                        text: "Sign up",
+                        fontsize: 13.sp,
+                        color: Theme.of(context).colorScheme.onSecondary,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                  ],
+                ),
               ],
             ),
           ),

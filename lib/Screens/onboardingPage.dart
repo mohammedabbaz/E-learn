@@ -123,7 +123,7 @@ class OnboardingPage extends GetView<OnboardingController> {
                                     fontSize: 15.h,
                                   )),
                               function: () {
-                                Get.toNamed(AppLinks.login);
+                                Get.offAllNamed(AppLinks.login);
                               },
                               color: Theme.of(context).colorScheme.onSecondary,
                               height: 40.h,

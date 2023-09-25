@@ -1,5 +1,6 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:e_learn/Controllers/LoginController.dart';
+import 'package:e_learn/Core/Data/constant/Color.dart';
 import 'package:e_learn/Core/Data/constant/Function.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -29,11 +30,12 @@ class SocialLoginButton extends StatelessWidget {
             ),
             AppText(
               text: " or sign in with",
-              fontsize: 15.sp,
+              fontsize: 12.sp,
               fontWeight: FontWeight.normal,
               color: Theme.of(context).colorScheme.secondary,
               overFlow: TextOverflow.clip,
             ),
+       
             Container(
                color: Theme.of(context).colorScheme.secondary.withOpacity(0.2),
               width: MediaQuery.of(context).size.width / 6,
@@ -42,7 +44,7 @@ class SocialLoginButton extends StatelessWidget {
           ],
         ),
         SizedBox(
-          height: 15.h,
+          height: 20.h,
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -70,17 +72,16 @@ Widget _SocialButton(void Function() ontap, String image) {
   return GestureDetector(
     onTap: ontap,
     child: Container(
-      height: 50.h,
-      width: 50.h,
+      height: 45.h,
+      width: 45.h,
+      
       padding: EdgeInsets.all(10.h),
-      decoration: BoxDecoration(
-        color: Colors.white,
+      decoration:  BoxDecoration(
+     border:Border.all(style:BorderStyle.solid,color: AppColors.gray) ,
         shape: BoxShape.circle,
-        image: DecorationImage(
-          image: AssetImage(Functions.getImage(image)),
-          fit: BoxFit.cover,
-        ),
+       
       ),
+      child: Image.asset(Functions.getImage(image), fit: BoxFit.cover,),
     ),
   );
 }
