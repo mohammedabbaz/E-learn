@@ -1,4 +1,3 @@
-import 'package:e_learn/Core/Data/constant/Color.dart';
 import 'package:e_learn/Core/Data/constant/Function.dart';
 import 'package:e_learn/Core/Data/constant/Link.dart';
 import 'package:flutter/material.dart';
@@ -39,7 +38,7 @@ class _SplashScreenState extends State<SplashScreen>
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: AppColors.white,
+        backgroundColor: Theme.of(context).colorScheme.background,
         body: Container(
           alignment: Alignment.center,
           height: double.infinity,
@@ -47,8 +46,8 @@ class _SplashScreenState extends State<SplashScreen>
             image: AssetImage(
               Functions.getImage('logo'),
             ),
-            height: 100.h,
-            width: 100.h,
+            height: 200.h,
+            width: 200.h,
             fit: BoxFit.cover,
           ),
         ),
